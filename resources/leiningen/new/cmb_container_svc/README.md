@@ -23,19 +23,19 @@ To learn more about configuring Logback, read its [documentation](http://logback
 3. Connect your editor to the running REPL session.
    Re-evaluated code will be seen immediately in the service.
 
-### [Docker](https://www.docker.com/) container support
+#### [Docker](https://www.docker.com/) container support
 
 1. Build an uberjar of your service: `lein uberjar`
 2. Build a Docker image: `sudo docker build -t {{name}} .`
 3. Run your Docker image: `docker run -p 8080:8080 {{name}}`
 
-### [OSv](http://osv.io/) unikernel support with [Capstan](http://osv.io/capstan/)
+#### Code formatting and Linting
 
-1. Build and run your image: `capstan run -f "8080:8080"`
+This is a formatter that conforms to the [The Clojure Style Guide
+](https://github.com/bbatsov/clojure-style-guide#source-code-layout--organization)
 
-Once the image it built, it's cached. To delete the image and build a new one:
-
-1. `capstan rmi {{name}}; capstan build`
+1. Check:
+2. Fix:
 
 ## Links
 
