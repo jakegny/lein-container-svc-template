@@ -31,11 +31,24 @@ To learn more about configuring Logback, read its [documentation](http://logback
 
 #### Code formatting and Linting
 
-This is a formatter that conforms to the [The Clojure Style Guide
-](https://github.com/bbatsov/clojure-style-guide#source-code-layout--organization)
+This is a formatter that conforms to the [The Clojure Style Guide](https://github.com/bbatsov/clojure-style-guide#source-code-layout--organization)
 
-1. Check:
-2. Fix:
+1. Check, verify but don't change: `lein cljfmt check`
+2. Fix, make it right: `lein cljfmt fix`
+
+#### Scan Dependencies
+
+Uses the [National Vulnerability Database](https://nvd.nist.gov/)
+
+`lein nvd check`
+
+#### Dead Code Analysis
+
+Scans your project for any unused code.
+
+`lein yagni`
+
+NOTE (11/26/18): Currently seeing 'build.server/run-dev' but that is used for development. Working on a fix.
 
 ## Links
 
