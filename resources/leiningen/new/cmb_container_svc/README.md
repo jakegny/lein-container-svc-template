@@ -16,6 +16,16 @@ FIXME
 To configure logging see config/logback.xml. By default, the app logs to stdout and logs/.
 To learn more about configuring Logback, read its [documentation](http://logback.qos.ch/documentation.html).
 
+## Testing
+
+#### Coverage
+
+`lein cloverage`
+
+#### Test watching (with auto)
+
+`lein auto test`
+
 ## Developing your service
 
 1. Start a new REPL: `lein repl`
@@ -60,11 +70,17 @@ Scans your project for any unused code.
 
 NOTE (11/26/18): Currently seeing 'build.server/run-dev' but that is used for development. Working on a fix.
 
-## Testing
+#### Code Recommendations
 
-#### Coverage
+For more idiomatic clojure code we recommend [kibit](https://github.com/jonase/kibit)
 
-`lein cloverage`
+Usage:
+
+For suggestions: `lein kibit`
+
+Watching files: `lein auto kibit`
+
+To fix: `lein kibit --replace`
 
 ## Links
 
