@@ -42,6 +42,16 @@ Uses the [National Vulnerability Database](https://nvd.nist.gov/)
 
 `lein nvd check`
 
+#### Manage Dependencies
+
+See which of your dependencies are outdated with [lein-ancient](https://github.com/xsc/lein-ancient)
+
+Usage:
+
+To check dependencies: `lein ancient`
+
+To upgrade dependencies: `lein ancient upgrade`, or interactively `lein ancient upgrade :interactive`
+
 #### Dead Code Analysis
 
 Scans your project for any unused code.
