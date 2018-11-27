@@ -2,6 +2,7 @@
     (:gen-class) ; for -main method in uberjar
     (:require [io.pedestal.http :as server]
               [io.pedestal.http.route :as route]
+              [taoensso.timbre :as log]
               [{{namespace}}.service :as service]))
 
   ;; This is an adapted service map, that can be started and stopped
@@ -11,7 +12,7 @@
 (defn run-dev
   "The entry-point for 'lein run-dev'"
   [& args]
-  (println "\nCreating your [DEV] server...")
+  (log/info "Creating your [DEV] server...")
   (-> service/service ;; start with production configuration
       (merge {:env :dev
                 ;; do not block thread that starts web server
@@ -32,5 +33,5 @@
 (defn -main
   "The entry-point for 'lein run'"
   [& args]
-  (println "\nCreating your server...")
+  (log/info "Creating your server...")
   (server/start runnable-service))

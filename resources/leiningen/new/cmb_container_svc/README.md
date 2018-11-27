@@ -50,6 +50,12 @@ Scans your project for any unused code.
 
 NOTE (11/26/18): Currently seeing 'build.server/run-dev' but that is used for development. Working on a fix.
 
+## Testing
+
+#### Coverage
+
+`lein cloverage`
+
 ## Links
 
 - [Other examples](https://github.com/pedestal/samples)
